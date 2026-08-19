@@ -21,6 +21,7 @@ const PLATFORMS = [
     badgeColor: 'text-yellow-400 border-yellow-400/30',
     // Problems Solved total is not displayed — language counts may overlap.
     // Showing language breakdown instead.
+    //kbjkbjlblj
     stats: [
       { label: 'Global Rank', value: '1.49M' },
       { label: 'Solved (C++)', value: '86' },
