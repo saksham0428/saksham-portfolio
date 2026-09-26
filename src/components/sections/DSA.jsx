@@ -5,7 +5,7 @@ import { GithubIcon } from '../ui/SocialIcons';
 import { profile } from '../../data/profile';
 
 // ============================================================
-// VERIFIED STATS — Last updated: August 2026
+// VERIFIED STATS — Last updated: September 2026
 // Source: Public profiles
 // ============================================================
 
@@ -19,15 +19,13 @@ const PLATFORMS = [
     borderColor: 'border-yellow-400/20',
     badge: '50 Days Badge 2026',
     badgeColor: 'text-yellow-400 border-yellow-400/30',
-    // Problems Solved total is not displayed — language counts may overlap.
-    // Showing language breakdown instead.
-    //kbjkbjlblj
+    totalSolved: '125+',
     stats: [
-      { label: 'Global Rank', value: '1.49M' },
       { label: 'Solved (C++)', value: '86' },
       { label: 'Solved (Java)', value: '30' },
+      { label: 'Solved (MySQL)', value: '8' },
     ],
-    extraStat: { label: 'Solved (MySQL)', value: '8' },
+    extraStat: null,
     note: 'Current public profile',
   },
   {
@@ -116,10 +114,10 @@ export default function DSA() {
           className="mb-12"
         >
           <h2 className="text-3xl md:text-6xl font-black tracking-tight text-text-primary mb-3">
-            THE GRIND
+            DSA & Problem Solving
           </h2>
           <p className="text-text-secondary text-base max-w-xl">
-            Problems solved. Concepts learned. Still going.
+            Consistently practicing Data Structures and Algorithms through LeetCode, with a focus on core problem-solving patterns and interview preparation.
           </p>
         </motion.div>
 
@@ -163,7 +161,17 @@ export default function DSA() {
                 </div>
               </div>
 
-              {/* Main stats grid */}
+              {/* Total solved hero stat (LeetCode only) */}
+              {platform.totalSolved && (
+                <div className="mb-4 flex items-baseline gap-2">
+                  <span className={`font-mono text-3xl font-black ${platform.color} leading-none`}>
+                    {platform.totalSolved}
+                  </span>
+                  <span className="font-mono text-xs text-text-muted">Problems Solved</span>
+                </div>
+              )}
+
+              {/* Language breakdown grid */}
               <div className="grid grid-cols-3 gap-3 mb-3">
                 {platform.stats.map((stat) => (
                   <div key={stat.label} className="border border-border p-3">
@@ -174,16 +182,6 @@ export default function DSA() {
                   </div>
                 ))}
               </div>
-
-              {/* Extra stat row (MySQL for LC) */}
-              {platform.extraStat && (
-                <div className="border border-border p-3 mb-3 inline-flex flex-col">
-                  <div className="font-mono text-base font-bold text-text-primary mb-0.5">
-                    {platform.extraStat.value}
-                  </div>
-                  <div className="font-mono text-xs text-text-muted">{platform.extraStat.label}</div>
-                </div>
-              )}
 
               {/* Footer */}
               <div className="flex items-center justify-between mt-4 pt-4 border-t border-border">

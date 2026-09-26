@@ -7,27 +7,27 @@
 
 // NOTE: Verified GitHub profile: https://github.com/saksham0428
 // Public repos found: web-dev, webdev, web-dev2, Leet-code, exp3.1, exp3.2
-// None of these repos confidently match the portfolio projects below.
-// All github fields are set to null until matching repos are confirmed.
+// SkyNex (project 01) is deployed at https://sky-nex.vercel.app/
+// GitHub repo for SkyNex not confirmed public — set to null until verified.
 
 export const projects = [
   {
     id: '01',
-    slug: 'skin-cancer-detection',
-    title: 'Skin Cancer Detection',
-    subtitle: 'AI / Computer Vision',
-    tagline: 'An AI-based system to analyze skin images and assist in detecting potential skin cancer patterns.',
+    slug: 'skynex',
+    title: 'SkyNex',
+    subtitle: 'AI-Powered Skin Lesion Analysis',
+    tagline: 'A deployed AI web application that processes skin lesion images and provides deep learning–based classification through an interactive interface.',
     description:
-      'Built a deep learning pipeline that processes dermoscopic images to identify patterns associated with skin cancer. The system provides a probability score and highlights suspicious regions, aiding early detection.',
-    tech: ['Python', 'TensorFlow', 'OpenCV', 'Computer Vision', 'CNN'],
+      'An AI-powered web application for preliminary skin lesion analysis, using deep learning and computer vision to classify uploaded lesion images. SkyNex connects a trained PyTorch model with a deployed web interface to provide accessible AI-based analysis.',
+    tech: ['Python', 'PyTorch', 'Computer Vision', 'React', 'Vercel'],
     features: [
-      'Image preprocessing & augmentation pipeline',
-      'CNN-based classification model',
-      'Probability heatmap visualization',
-      'Multiple cancer type classification',
+      'Skin lesion image upload & preprocessing',
+      'PyTorch deep learning classification model',
+      'AI-based preliminary analysis output',
+      'Deployed React frontend on Vercel',
     ],
-    github: null, // No matching repository found — add repo URL when available
-    demo: null,
+    github: null, // No confirmed public repository — add repo URL when available
+    demo: 'https://sky-nex.vercel.app/',
   },
   {
     id: '02',
